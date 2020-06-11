@@ -43,6 +43,9 @@
             <input type="submit" class="btn" value="Histórico" /> 
           </p>
         </form>
+        <a class="back-link" href="/calculadora/login">
+            Sair
+        </a>
     </div>
     </body>    
 </html>

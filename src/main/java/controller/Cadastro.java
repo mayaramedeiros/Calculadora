@@ -16,7 +16,7 @@ public class Cadastro extends HttpServlet{
     @Override
     public void doPost(HttpServletRequest req, HttpServletResponse res){
         try{
-            res.sendRedirect(req.getContextPath() + "/login");
+            res.sendRedirect(req.getContextPath() + "/calculadora");
         }catch (Exception e){
             System.out.println("Erro");
         }
