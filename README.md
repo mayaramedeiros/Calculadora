@@ -1,2 +1,2 @@
-# MayNews
+# Calculadora
 Trabalho engenharia de software
