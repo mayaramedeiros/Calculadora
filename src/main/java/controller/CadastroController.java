@@ -11,6 +11,9 @@ import model.Usuario;
 @WebServlet("/cadastrar")
 public class CadastroController extends HttpServlet{
 
+	 /**
+	*
+	*/
 	private static final long serialVersionUID = 1L;
     
     @Override
@@ -38,7 +41,7 @@ public class CadastroController extends HttpServlet{
 			usuarioDao.createUser(usuario);
 
 			resp.setContentType("text/html;charset=UTF-8");
-        	resp.getWriter().write("Success Data");
+        	//resp.getWriter().write("Success Data");
 
 		} catch (Exception e) {
 			System.out.println(e);

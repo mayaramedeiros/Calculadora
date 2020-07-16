@@ -10,8 +10,10 @@ import model.Usuario;
 
 @WebServlet("/login")
 public class LoginController extends HttpServlet{
-
+    
 	private static final long serialVersionUID = 1L;
+
+	
 
 	@Override
 	public void doGet(HttpServletRequest req,HttpServletResponse res) {
@@ -29,17 +31,17 @@ public class LoginController extends HttpServlet{
 			String senha = req.getParameter("senha");
 
 			UsuarioDAO usuarioDao = new UsuarioDAO();
-			String nome = usuarioDao.findUserByEmail(email,senha);
+			Usuario user = usuarioDao.findUserByEmail(email,senha);
 
-			if(nome != null && !nome.equals("")) {
+			if (user != null) {
 				HttpSession session = req.getSession();  
-				session.setAttribute("username", nome);
-				resp.setContentType("text/html;charset=UTF-8");
-        		resp.getWriter().write("Success Data");
+				session.setAttribute("username", user.getNome());
+				resp.setStatus(200);
+				resp.setContentType("text/html;charset=UTF-8");		
 
 			} else {
 				req.setAttribute("message", "Erro ao realizar login. Verifique email e senha e tente novamente");
-				req.getRequestDispatcher("/view/login.jsp").forward(req, resp);
+				resp.setStatus(500);
 			}
 
 		} catch (Exception e) {

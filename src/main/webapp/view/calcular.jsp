@@ -2,8 +2,14 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 
 <!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
 <html>
     <head>
+        <title>Calculadora Online</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="resources/css/calcular.css"/>
         <script src="resources/js/jquery-3.3.1.min.js"></script>
@@ -11,6 +17,7 @@
     </head>
     <body>
         <div class="container">
+
             <input type="text" id="display" class="result">
 
             <div class="row">
@@ -42,11 +49,10 @@
                 <input type="button" onclick="isFloat('.')" value="." class="global">
                 <input type="button" onclick="resultado()" value="=" id="result" class="green global" disabled=true>
             </div>
+
             <div>
-                <br>
-                <input type="button" onclick="historico()" value="Historico" class="global red">
-                <br>
-                <input type="button" onclick="historico()" value="Sair" class="global red">
+                <button onclick="historico()" class="global red">Historico</button>
+                <button onclick="window.location.href='/calculadora/logout'" class="global red">Sair</button> 
             </div>
         </div>
     </body>

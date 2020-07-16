@@ -15,17 +15,30 @@ and open the template in the editor.
         <script src="resources/js/jquery-3.3.1.min.js"></script>
         <script src="resources/js/historico.js"></script>
     </head>
-    <h1 class="titulo">Historico</h1>
+    <h1 class="color">Historico</h1>
     <body>
         <div class="content">
             <div class="card">
-              <div class="container">
-                <p>2 + 2 = 4</p> 
-              </div>
+            <table id="t01">
+                <c:forEach items="${registros}" var="registro">
+                    <tr>
+                    <td>
+                        <div class="container">
+                            <c:out value="${registro.nome}" /> realizou a operacao 
+                            <c:out value="${registro.num1}"/>
+                            <c:out value="${registro.operacao}"/>
+                            <c:out value="${registro.num2}"/> = 
+                            <c:out value="${registro.resultado}"/> na data
+                            <c:out value="${registro.horario}"/>
+                        </div>
+                    </td>
+                    </tr>
+                </c:forEach>
+            </table>
             </div>
-        <div>
-        <div>
-            <button class="global green"onclick="calcular()" >Voltar para calculadora</button>
+            <div>
+                <button onclick="calcular()" class="global green" >Voltar para calculadora</button>
+            </div>
         </div>
     </body>
 </html>
