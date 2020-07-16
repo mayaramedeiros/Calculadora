@@ -20,5 +20,5 @@ create table historico(
     PRIMARY KEY (id)
 );
 
-insert into usuario(nome, email, senha) values ('Aline', 'aline@teste.com', '123456');
+insert into usuario(nome, email, senha) values ('Mayara', 'mayara@teste.com', '123456');
 insert into usuario(nome, email, senha) values ('Teste', 'teste@teste.com', '123456');
