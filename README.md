@@ -6,7 +6,7 @@ A aplicação conterá 4 telas em seu total:
 <ol>
     <li>Tela de login</li>
     <li>Tela de cadastro</li>
-    <li>Tela para realizar as contas</li>
+    <li>Tela de calculadora</li>
     <li>Tela de histórico</li>
 </ol>
 A tela de histórico contém todo o histórico de contas feitas pelo aplicativo, contendo também o usuário que a fez e o horário em que foi feito a conta.
